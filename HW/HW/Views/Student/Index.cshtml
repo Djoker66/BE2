@@ -1,0 +1,29 @@
+﻿
+
+@model StudentViewModel
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index page</h1>
+
+<h2>Students:</h2>
+
+<ul>
+    @foreach(Student item in Model.Students)
+    {
+        <li>@item.FullName - @item.Point</li>
+    }
+</ul>
+
+<h2>Groups:</h2>
+
+<ul>
+    @foreach (Group item in Model.Groups)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
+
